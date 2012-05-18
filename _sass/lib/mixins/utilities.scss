@@ -1,0 +1,124 @@
+// Helper functions.
+
+@mixin display($type, $important: false) {
+	
+	@if $important {
+		$important-string: !important;
+	}
+	
+	$important-string: '' !default;
+	
+	@if $type == 'block' {
+		display:block #{$important-string};
+	}
+	@else if $type == 'inline' {
+		display:inline #{$important-string};
+	}
+	@else if $type == 'inline-block' {
+		@include display-inline-block($important)
+	}
+	@else if $type == 'table' {
+		
+//		@if ie(6) or ie(7) {
+//			behavior: url(#{$ie-behaviours-path}display-table/display-table.min.htc);
+//			-dt-display: table;
+//		}
+		
+		@include display-table($important);
+	}
+	@else if $type == 'table-row' {
+		
+//		@if ie(6) or ie(7) {
+//			behavior: url(#{$ie-behaviours-path}display-table/display-table.min.htc);
+//			-dt-display: table-row;
+//		}
+		
+		@include display-table-row($important);
+	}
+	@else if $type == 'table-cell' {
+		
+//		@if ie(6) or ie(7) {
+//			behavior: url(#{$ie-behaviours-path}display-table/display-table.min.htc);
+//			-dt-display: table-cell;
+//		}
+		
+		@include display-table-cell($important);
+	}
+	
+}
+
+@mixin display-inline-block($important: false) {
+	
+	@if $important {
+		$important-string: !important;
+	}
+	
+	$important-string: '' !default;
+	
+	display:add-prefix(inline-stack, -moz) #{$important-string};
+	display:inline-block #{$important-string};
+	
+}
+
+@mixin display-table($important: false) {
+	@if $important {
+		$important-string: !important;
+	}
+	
+	$important-string: '' !default;
+	
+	display:table #{$important-string};
+	
+}
+
+@mixin display-table-row($important: false) {
+	@if $important {
+		$important-string: !important;
+	}
+	
+	$important-string: '' !default;
+	
+	display:table-row #{$important-string};
+	
+}
+
+@mixin display-table-cell($important: false) {
+	@if $important {
+		$important-string: !important;
+	}
+	
+	$important-string: '' !default;
+	
+	display:table-cell #{$important-string};
+	
+}
+
+@mixin clearfix() {
+	&:after { 
+		content: "."; 
+		display: block; 
+		height: 0; 
+		clear: both; 
+		visibility: hidden;
+	}
+}
+
+@mixin ie-rule($versions: $support-ie-versions) {
+	@each $version in $versions {
+		html.ie#{$version} & {
+			@content;
+		}
+	}
+}
+
+@mixin main-container($center: true, $width: $content-container-width) {
+	width: $width;
+	padding:0;
+	
+	@if $center {
+		margin:0 auto;
+	}
+	@else {
+		margin:0;
+	}
+}

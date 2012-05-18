@@ -1,0 +1,76 @@
+$package-buttons:					true;
+$output-buttons-package-classes: 		false;
+
+
+// MIXINS
+
+@mixin btn() {
+	border:1px solid #dcdcdc;
+	color:#777;
+	padding:6px 24px;
+	text-decoration:none;
+	text-align:center;
+	
+	@include box-shadow(0 14px 0 0 rgba(255, 255, 255, 0.1) inset);
+	@include border-radius(.5em);
+	@include display(inline-block);
+	@include text-shadow(1px 1px 0px #fff);
+	@include text-shadow(1px 1px 0px rgba(255, 255, 255, .75));
+	
+	@include linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+	
+	&.danger {
+		
+		border:1px solid $danger-color-dark;
+		color:#fff;
+		
+		@include text-shadow(1px 1px 0px $danger-color-light);
+		@include linear-gradient(center top, $danger-color-light 5%, $danger-color 100%, $image-fallback: '#{$images-relative-path}backgrounds/test.png');
+		
+		&:hover {
+			
+			border:1px solid $danger-color-light;
+			color:#fff;
+			
+			@include text-shadow(1px 1px 0px $danger-color-light);
+			@include linear-gradient(center top, $danger-color 5%, $danger-color-dark 100%);
+		}
+	}
+	
+	&.small {
+		font-size:$font-size-small;
+	}
+	
+	&.disabled {
+		
+		
+		cursor:default;
+		
+		@include linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+		@include opacity(.8);
+		
+		&:hover {
+			@include linear-gradient(center top, #ededed 5%, #dfdfdf 100%);
+		}
+	}
+	
+	a {
+		
+		@include display(inline-block);
+	}
+	
+	&:hover {
+		@include linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+
+	}
+}
+
+// CLASSES
+
+@if $output-package-classes or $output-buttons-package-classes {
+	.btn {
+
+		@include btn();
+	}
+	
+} // End If

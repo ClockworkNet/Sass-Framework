@@ -1,0 +1,15 @@
+// Functions for smoothing out browser incompatibilities. 
+
+@function add-prefix($property, $prefix, $separator: '-') {
+		@return $prefix + $separator + $property;
+}
+
+// A test to determine if a specific version of Inernet Explorer is supported.
+@function ie($version-to-test) {
+	@each $version in $support-ie-versions {
+		@if($version == $version-to-test) {
+			@return true;
+		}
+	}
+	@return false;
+}

@@ -1,0 +1,139 @@
+// Library Compiler Configurations
+
+$output-package-classes:	false; // Output generic classes for use in HTML templates.
+
+// Asset Paths
+
+$styles-absolute-path:		'/grid/';
+$styles-relative-path:		'../';
+
+$css-absolute-path:			$styles-absolute-path + 'css/';
+$css-relative-path:			'.';
+
+$fonts-relative-path:		$styles-relative-path + 'fonts/';
+$fonts-absolute-path:		$styles-absolute-path + 'fonts/';
+
+$images-relative-path:		$styles-relative-path + 'images/';
+$images-absolute-path:		$styles-absolute-path + 'images/';
+
+
+
+// Boxes
+
+$box-sizing: 				 border-box; //padding-box | border-box
+
+
+
+// Browsers
+
+// The order of the prefix list determines the order of the outputted prefixed properties.
+// The prefix-less CSS3 propery allways comes last.
+$vendor-prefixes:			-webkit, -moz, -ms, -o, -khtml; // Extra vendor prefixs: mso, -atsc, -wap
+
+// IE Version Support
+$support-ie-versions:		6, 7, 8;
+
+// IE uses relative paths from the HTML file. Since we can't be certain of the HTML location, we must use absolute paths. Be sure that the $styles-absolute-path variable is set correctly
+$ie-behaviours-path:		$styles-absolute-path + 'ie-behaviors/';
+
+
+
+// Colors
+
+// Standard Colors
+$color-black:				#000;
+$color-white:				#fff;
+$color-dark-gray:			lighten($color-black, 25%);
+$color-gray:				lighten($color-black, 50%);
+$color-light-gray:			lighten($color-black, 75%);
+
+// Danger (error) Colors
+$danger-color:				#cc0000;
+$danger-color-dark:			darken($danger-color, 50%);
+$danger-color-light:		lighten($danger-color, 50%);
+
+// Safe Colors
+$safe-color:				#00cc00;
+$safe-color-dark:			darken($safe-color, 50%);
+$safe-color-light:			lighten($safe-color, 50%);
+
+// Warn Colors
+$warn-color:				#e5be43;
+$warn-color-dark:			darken($warn-color, 50%);
+$warn-color-light:			lighten($warn-color, 50%);
+
+// Misc Colors
+$background-color-base:		$color-white;
+
+$anchor-color-base:			#1090BD;
+$anchor-color-link:			lighten($anchor-color-base, 15%);
+$anchor-color-visited:		darken($anchor-color-base, 15%);
+$anchor-color-hover:		lighten($anchor-color-base, 15%);
+$anchor-color-active:		lighten($anchor-color-base, 15%);
+
+
+
+// Fonts/Typography
+
+// Font Colors
+$font-color-base:			#222;
+
+// Font Sizes
+$font-size-base:			14;
+$font-size-base-unit:		'px';
+
+// Font Sizes 1-6 (mainly useful for setting the heading sizes).
+$font-size-1:				rem($font-size-base * 2);
+$font-size-2:				rem($font-size-base * 1.75);
+$font-size-3:				rem($font-size-base * 1.5);
+$font-size-4:				rem($font-size-base * 1.25);
+$font-size-5:				rem($font-size-base);
+$font-size-6:				rem($font-size-base * .8);
+
+// Font Sizes Human readable.
+$font-size-small:			$font-size-6;
+$font-size-regular:			$font-size-base;
+$font-size-medium:			$font-size-4;
+$font-size-large:			$font-size-1;
+
+// Font Stacks
+$serif:						serif;
+$sans:						sans-serif;
+$mono:						monospace;
+
+$font-stack-base:			$sans;
+
+// Typography
+$line-height-base:			1.7em;
+
+$bold:						700;
+$extra-bold:				900;
+$regular:					400;
+$normal:					$regular;
+$light:						200;
+$extra-light:				100;
+$font-weight-base:			$regular;
+
+
+
+// Grid
+$grid-cell-total:			16;
+$grid-cell-width:			rem($font-size-base * 4);
+
+$content-container-width:	$grid-cell-total * $grid-cell-width;
+$center-content-container:	true; // When the content container is smaller than browser window, center it within the window.
+
+
+
+// Media Query Breakpoints
+
+$small-desktop-max-width:			$content-container-width;
+$large-desktop-min-width:			1824px;
+
+$handheld-landscape-min-width:		321px;
+$handheld-portrait-max-width:		480px;
+
+$tablet-min-width:					768px;
+$tablet-max-width:					1024px;
+
+$hi-resolution-pixel-ratio:			1.5;

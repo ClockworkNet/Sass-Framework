@@ -1,0 +1,199 @@
+$package-grid:						true;
+$output-grid-package-classes: 		false;
+
+// MIXINS
+
+@mixin collapse-cell-spaces($space-size: .5em) {
+	letter-spacing: 0;
+	word-spacing: -#{$space-size};
+	
+	* {
+		letter-spacing: normal;
+		word-spacing: normal;
+	}
+	
+}
+
+@mixin row($collapse-cell-spaces: true) {
+	width:100%;
+	padding:0;
+	
+	vertical-align: top;
+	
+	@include display(table, $important: false);
+	
+	@if $collapse-cell-spaces {
+		@include collapse-cell-spaces();
+	}
+	
+	@if ie(6) or ie(7) or ie(8) {
+		@include ie-rule(6 7 8) {
+			@include display(block);
+			padding:0;
+			float:left;
+		}
+	}
+}
+
+@mixin span-cell-children($num: 1) {
+	> .cell {
+		width: $grid-cell-width * $num;
+	}
+}
+
+@mixin span-col-children($num: 1) {
+	> .col {
+		width: ($num / $grid-cell-total) * 100%;
+	}
+}
+
+@mixin col($width: 100%, $context: $grid-cell-total) {
+	
+	@if unitless($width) {
+		$width: ($width / $context) * 100%;
+	}
+	
+	@include display(table-cell, $important: false);
+	width:$width;
+	margin:0;
+	padding:0;
+	
+	vertical-align: top;
+	letter-spacing: normal;
+	word-spacing: normal;
+	
+	@if ie(6) or ie(7) or ie(8) {
+		html.ie6 &,
+		html.ie7 &,
+		html.ie8 & {
+			@include display(block);
+			padding:0;
+			width: floor($width);
+			float:left;
+		}
+	}
+}
+
+@mixin cell($width: 100%, $gutter: 0, $vertical-space: 0, $context: $grid-cell-total) {
+	
+	// If $width is auto, no calculations can be made on it.
+	@if $width != auto {
+		// If $gutter is provided, check to see if it has a unit associated with it.
+		// If no unit is provided, assume the unit to be $grid-cell-width. Convert it into percent.
+		@if unitless($gutter) and $gutter != 0 {
+			$gutter: ($gutter / $context) * 100%;
+		}
+		// $gutter does have a unit
+		// Make sure the $gutter and $width are set to the same unit.
+		@else if unit($gutter) == unit($width) {
+			// Shrink $width to allot space for the gutter.
+			$width: $width - $gutter;
+		}
+		// $gutter and $width units do not match. Clear $gutter.
+		// TODO: Is there a better way to handle this senario?
+		@else {
+			$gutter: 0;
+		}
+		
+		// If no unit is provided, assume the unit to be $grid-cell-width. Convert it into percent.
+		@if unitless($vertical-space) and $vertical-space != 0 {
+			$vertical-space: ($vertical-space / $context) * 100%;
+		}
+		
+		// If no unit is provided, assume the unit to be $grid-cell-width. 
+		// Convert it into percent.
+		// Subtract $gutter
+		@if unitless($width) {
+			$width: (($width / $context) * 100%) - $gutter;
+		}
+	}
+	
+	
+	
+	
+	@include display(inline-block, $important: false);
+	width: $width;
+	margin:($vertical-space / 2) ($gutter / 2);
+	padding:0;
+	
+	vertical-align:top;
+	letter-spacing: normal;
+	word-spacing: normal;
+	
+	@if ie(6) or ie(7) or ie(8) {
+		html.ie6 &,
+		html.ie7 &,
+		html.ie8 & {
+			@if $width != auto {
+				$width: floor($width);
+			}
+			width: $width;
+			padding:0;
+			@include display(block);
+			float:left;
+		}
+	}
+}
+
+@mixin pushed-cell($width, $left-amount: 0, $right-amount: 0, $context: $grid-cell-total) {
+	@include cell($width, $context);
+	
+	@if unitless($left-amount) {
+		$left-amount: ($left-amount / $context) * 100%;
+	}
+	@if unitless($right-amount) {
+		$right-amount: ($right-amount / $context) * 100%;
+	}
+	
+	margin:0 $right-amount 0 $left-amount;
+	
+}
+
+// CLASSES
+
+@if $output-package-classes or $output-grid-package-classes {
+
+	.row {
+		@include row;
+		@include collapse-cell-spaces;
+	
+	
+		@for $i from 1 through $grid-cell-total {
+			&.span-cell-children-#{$i} {
+				@include span-cell-children($i);
+			}
+			&.span-col-children-#{$i} {
+				@include span-col-children($i);
+			}
+		}
+	
+	}
+
+	.col {
+		@include col($width: 100%);
+	}
+
+	.cell {
+		@include cell($width: 100%);
+	
+		@for $i from 1 through $grid-cell-total {
+			&.span-#{$i} {
+				width: $grid-cell-width * $i;
+			}
+		}
+	}
+
+	.collapse-cell-spaces {
+		@include collapse-cell-spaces;
+	}
+
+	@for $i from 1 through $grid-cell-total {
+		.col-span-#{$i} {
+			@include col($width: $grid-cell-width * $i);
+		}
+		.cell-span-#{$i} {
+			@include cell($width: $grid-cell-width * $i);
+		}
+	}
+
+} //End If

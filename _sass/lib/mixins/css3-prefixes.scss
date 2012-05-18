@@ -1,0 +1,130 @@
+// Mixins for automatic CSS3 Prefixing
+
+// Add Vendor Prefixes to a CSS declaration.
+@mixin with-vendor-prefixes($property, $value, $prefixes: $vendor-prefixes) {
+	@each $prefix in $prefixes {
+		#{add-prefix($property, $prefix)}: $value;
+	}
+	#{$property}: $value;
+}
+
+// Border Radius
+@mixin border-radius($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(border-radius, $value, $prefixes);
+	
+	@if ie(6) or ie(7) or ie(8) {
+//		*behavior: url(#{$ie-behaviours-path}pie/PIE.htc);
+	}
+}
+
+// Box Shadow
+@mixin box-shadow($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(box-shadow, $value, $prefixes);
+	
+	@if ie(6) or ie(7) or ie(8) {
+//		*behavior: url(#{$ie-behaviours-path}pie/PIE.htc);
+	}
+}
+
+// Box Sizing
+@mixin box-sizing($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(box-sizing, $value, $prefixes);
+}
+
+// Text Shadow
+@mixin text-shadow($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(text-shadow, $value, $prefixes);
+}
+
+// Transform
+@mixin transform($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(transform, $value, $prefixes);
+}
+
+// Transform Origin
+@mixin transform-origin($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(transform-origin, $value, $prefixes);
+}
+
+// Transform Style
+@mixin transform-style($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(transform-style, $value, $prefixes);
+}
+
+// Transition Shorthand
+@mixin transition($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(transition, $value, $prefixes);
+}
+
+	// Transition Property
+	@mixin transition-property($value, $prefixes: $vendor-prefixes) {
+		@include with-vendor-prefixes(transition-property, $value, $prefixes);
+	}
+	
+	// Transition Duration
+	@mixin transition-duration($value, $prefixes: $vendor-prefixes) {
+		@include with-vendor-prefixes(transition-duration, $value, $prefixes);
+	}
+	
+	// Transition Timing Function
+	@mixin transition-timing-function($value, $prefixes: $vendor-prefixes) {
+		@include with-vendor-prefixes(transition-timing-function, $value, $prefixes);
+	}
+	
+	// Transition Delay
+	@mixin transition-delay($value, $prefixes: $vendor-prefixes) {
+		@include with-vendor-prefixes(transition-delay, $value, $prefixes);
+	}
+
+//Perspective
+// Perspective Origin
+@mixin perspective($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(perspective, $value, $prefixes);
+}
+
+// Perspective Origin
+@mixin perspective-origin($value, $prefixes: $vendor-prefixes) {
+	@include with-vendor-prefixes(perspective-origin, $value, $prefixes);
+}
+
+@mixin opacity($value, $prefixes: $vendor-prefixes) {
+	@if ie(6) or ie(7) {
+		zoom: 1;
+		filter: alpha(opacity=#{$value});
+	}
+	
+	@if ie(8) or ie(9) {
+		#{add-prefix(filter, -ms)}: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value})";
+	}
+	
+	@include with-vendor-prefixes(opacity, $value, $prefixes);
+}
+
+@mixin linear-gradient($position, $color1, $color2, $image-fallback: false, $direction: horizontal, $prefixes: $vendor-prefixes) {
+	
+	background: $color1;
+	
+	@if $image-fallback {
+		background-image: url(#{$image-fallback});
+		background-position:left top;
+		@if($direction == horizontal) {
+			background-repeat:repeat-x;
+		}
+		@else if($direction == vertical) {
+			background-repeat:repeat-y;
+		}
+		@else {
+			background-repeat:no-repeat;
+		}
+		
+	}
+	
+	@each $prefix in $prefixes {
+		background: #{add-prefix(linear-gradient, $prefix)}#{"("}#{$position}, #{$color1}, #{$color2} #{")"};
+	}
+	
+	@if ie(6) or ie(7) or ie(8) {
+//		*behavior: url(#{$ie-behaviours-path}pie/PIE.htc);
+	}
+	
+}

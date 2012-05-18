@@ -1,0 +1,31 @@
+// Mixins for creating media queries.
+
+@mixin respond-to($media, $display: screen) {
+	@if $media == handhelds or $media == handheld {
+		@media only #{$display} and (min-width: #{$handheld-landscape-min-width}) and (max-width: #{$handheld-portrait-max-width}) { @content; }
+	}
+	@else if $media == handhelds-landscape {
+		@media only #{$display} and (min-width: #{$handheld-landscape-min-width}) { @content; }
+	}
+	@else if $media == handhelds-portrait {
+		@media only #{$display} and (max-width: #{$handheld-portrait-max-width}) { @content; }
+	}
+	@else if $media == tablet or $media == tablets {
+		@media only #{$display} and (min-width: #{$tablet-min-width}) and (max-width: #{$tablet-max-width}) { @content; }
+	}
+	@else if $media == tablet-portrait or $media == tablets-portrait {
+		@media only #{$display} and (min-width: #{$tablet-min-width}) and (max-width: #{$tablet-max-width}) and (orientation : portrait) { @content; }
+	}
+	@else if $media == tablet-landscape or $media == tablets-landscape {
+		@media only #{$display} and (min-width: #{$tablet-min-width}) and (max-width: #{$tablet-max-width}) and (orientation : landscape) { @content; }
+	}
+	@else if $media == hi-resolution or $media == iphone4 or $media == retena or $media == retena-display {
+		@media only #{$display} and (-webkit-min-device-pixel-ratio : #{$hi-resolution-pixel-ratio}), only screen and (min-device-pixel-ratio : #{$hi-resolution-pixel-ratio}) { @content; }
+	}
+	@else if $media == desktop-small {
+		@media only #{$display} and (max-width: #{$small-desktop-max-width}) { @content; }
+	}
+	@else if $media == desktop-large {
+		@media only #{$display} and (min-width: #{$large-desktop-min-width}) { @content; }
+	}
+}

@@ -1,0 +1,9 @@
+// Common styles for producing page layouts.
+
+* {
+	@include box-sizing($box-sizing);
+}
+
+.clearfix {
+	@include clearfix;
+}

@@ -1,0 +1,9 @@
+// Common styles for mobile devices.
+
+html {
+	@include with-vendor-prefixes($property: overflow-scrolling, $value: touch, $prefixes: -webkit);
+	@include with-vendor-prefixes($property: tap-highlight-color, $value: #f3f5f6, $prefixes: -webkit);
+	@include with-vendor-prefixes($property: text-size-adjust, $value: 100%, $prefixes: -webkit -ms);
+	@include with-vendor-prefixes($property: font-size-adjust, $value: 100%, $prefixes: -moz);
+}
+

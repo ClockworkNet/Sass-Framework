@@ -1,0 +1,1320 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+html {
+  background-color: white; }
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1.7em; }
+
+a {
+  color: #1090bd; }
+  a:link {
+    color: #2cbbed; }
+  a:visited {
+    color: #0a5a76; }
+  a:hover {
+    color: #2cbbed; }
+  a:active {
+    color: #2cbbed; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4em;
+  font-weight: 700; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.75em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1.25em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: 0.8em; }
+
+p {
+  padding: 1em 0;
+  margin: 1em 0; }
+
+strong {
+  font-style: inherit;
+  font-weight: bold; }
+
+em {
+  font-style: italic;
+  font-weight: inherit;
+  line-height: inherit; }
+
+blockquote {
+  margin-bottom: 1.7em;
+  padding-left: 20px;
+  border-left: 5px solid #eee;
+  font-size: 24px;
+  line-height: 3.4em; }
+  blockquote small {
+    display: block;
+    color: #bfbfbf;
+    font-size: 18px;
+    font-family: serif;
+    line-height: 24px; }
+    blockquote small:before {
+      content: '\2014 \00A0'; }
+
+address {
+  display: block;
+  line-height: 1.7em;
+  margin-bottom: 1.7em; }
+
+code, pre {
+  padding: 0 3px 2px;
+  font-family: monospace;
+  font-size: 12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px; }
+
+code {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.75); }
+
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 11px;
+  margin: 1.7em 0;
+  line-height: 1.7em;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+nav ol, nav ul, .nav ol, .nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  nav ol li, nav ul li, .nav ol li, .nav ul li {
+    display: -moz-inline-stack ;
+    display: inline-block ; }
+    nav ol li a, nav ul li a, .nav ol li a, .nav ul li a {
+      display: -moz-inline-stack ;
+      display: inline-block ; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+html {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  -webkit-tap-highlight-color: #f3f5f6;
+  tap-highlight-color: #f3f5f6;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-font-size-adjust: 100%;
+  font-size-adjust: 100%; }
+
+html body {
+  width: 64em;
+  padding: 0;
+  margin: 0 auto;
+  background-color: #eee; }
+  @media only screen and (max-width: 64em) {
+    html body {
+      width: 100%; } }
+  html body > header {
+    width: 100%;
+    padding: 0;
+    vertical-align: top;
+    display: table ;
+    letter-spacing: 0;
+    word-spacing: -0.5em; }
+    html body > header * {
+      letter-spacing: normal;
+      word-spacing: normal; }
+    html.ie6 html body > header {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html.ie7 html body > header {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html.ie8 html body > header {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html body > header hgroup {
+      display: table-cell ;
+      width: 37.5%;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+      letter-spacing: normal;
+      word-spacing: normal; }
+      @media only screen and (max-width: 480px) {
+        html body > header hgroup {
+          display: block;
+          width: 100%; } }
+      html.ie6 html body > header hgroup, html.ie7 html body > header hgroup, html.ie8 html body > header hgroup {
+        display: block ;
+        padding: 0;
+        width: 37%;
+        float: left; }
+      html body > header hgroup h1 {
+        padding: 0.429em 0.714em;
+        border-bottom: #bfbfbf dashed 2px; }
+      html body > header hgroup h2 {
+        padding-top: 0.286em;
+        padding-left: 1em;
+        font-style: italic;
+        color: gray; }
+      @media only screen and (max-width: 480px) {
+        html body > header hgroup h1, html body > header hgroup h2 {
+          display: block;
+          width: 100%;
+          text-align: center;
+          border-bottom: #bfbfbf dashed 2px; }
+          html body > header hgroup h1:first-child, html body > header hgroup h2:first-child {
+            border-bottom: 0; } }
+    html body > header nav {
+      display: table-cell ;
+      width: 62.5%;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+      letter-spacing: normal;
+      word-spacing: normal;
+      border-left: #bfbfbf dashed 2px; }
+      @media only screen and (max-width: 480px) {
+        html body > header nav {
+          display: block;
+          width: 100%; } }
+      html.ie6 html body > header nav, html.ie7 html body > header nav, html.ie8 html body > header nav {
+        display: block ;
+        padding: 0;
+        width: 62%;
+        float: left; }
+      html body > header nav ul {
+        width: 100%;
+        padding: 0;
+        vertical-align: top;
+        display: table ;
+        letter-spacing: 0;
+        word-spacing: -0.5em; }
+        html body > header nav ul * {
+          letter-spacing: normal;
+          word-spacing: normal; }
+        html.ie6 html body > header nav ul {
+          display: block ;
+          padding: 0;
+          float: left; }
+        html.ie7 html body > header nav ul {
+          display: block ;
+          padding: 0;
+          float: left; }
+        html.ie8 html body > header nav ul {
+          display: block ;
+          padding: 0;
+          float: left; }
+        html body > header nav ul li {
+          display: -moz-inline-stack ;
+          display: inline-block ;
+          width: 20%;
+          margin: 0 0;
+          padding: 0;
+          vertical-align: top;
+          letter-spacing: normal;
+          word-spacing: normal; }
+          @media only screen and (max-width: 480px) {
+            html body > header nav ul li {
+              display: -moz-inline-stack ;
+              display: inline-block ;
+              width: 17.5%;
+              margin: 0 1.25%;
+              padding: 0;
+              vertical-align: top;
+              letter-spacing: normal;
+              word-spacing: normal;
+              padding: 1em 0;
+              text-align: center; }
+              html.ie6 html body > header nav ul li, html.ie7 html body > header nav ul li, html.ie8 html body > header nav ul li {
+                width: 17%;
+                padding: 0;
+                display: block ;
+                float: left; } }
+          html.ie6 html body > header nav ul li, html.ie7 html body > header nav ul li, html.ie8 html body > header nav ul li {
+            width: 20%;
+            padding: 0;
+            display: block ;
+            float: left; }
+          html body > header nav ul li a {
+            display: block;
+            width: 100%;
+            padding: 0.857em 0.429em;
+            text-align: center; }
+            @media only screen and (max-width: 480px) {
+              html body > header nav ul li a {
+                border: 1px solid #dcdcdc;
+                color: #777;
+                padding: 6px 24px;
+                text-decoration: none;
+                text-align: center;
+                -webkit-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -moz-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -ms-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -o-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -khtml-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -webkit-border-radius: 0.5em;
+                -moz-border-radius: 0.5em;
+                -ms-border-radius: 0.5em;
+                -o-border-radius: 0.5em;
+                -khtml-border-radius: 0.5em;
+                border-radius: 0.5em;
+                display: -moz-inline-stack ;
+                display: inline-block ;
+                -webkit-text-shadow: 1px 1px 0px white;
+                -moz-text-shadow: 1px 1px 0px white;
+                -ms-text-shadow: 1px 1px 0px white;
+                -o-text-shadow: 1px 1px 0px white;
+                -khtml-text-shadow: 1px 1px 0px white;
+                text-shadow: 1px 1px 0px white;
+                -webkit-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -moz-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -ms-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -o-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -khtml-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                background: #ededed 5%;
+                background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                padding: 0.857em 0.143em; }
+                html body > header nav ul li a.danger {
+                  border: 1px solid black;
+                  color: #fff;
+                  -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                  -moz-text-shadow: 1px 1px 0px #ffcccc;
+                  -ms-text-shadow: 1px 1px 0px #ffcccc;
+                  -o-text-shadow: 1px 1px 0px #ffcccc;
+                  -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                  text-shadow: 1px 1px 0px #ffcccc;
+                  background: #ffcccc 5%;
+                  background-image: url(../images/backgrounds/test.png);
+                  background-position: left top;
+                  background-repeat: repeat-x;
+                  background: -webkit-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -moz-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -ms-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -o-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -khtml-linear-gradient(center top, #ffcccc 5%, #cc0000 100% ); }
+                  html body > header nav ul li a.danger:hover {
+                    border: 1px solid #ffcccc;
+                    color: #fff;
+                    -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                    -moz-text-shadow: 1px 1px 0px #ffcccc;
+                    -ms-text-shadow: 1px 1px 0px #ffcccc;
+                    -o-text-shadow: 1px 1px 0px #ffcccc;
+                    -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                    text-shadow: 1px 1px 0px #ffcccc;
+                    background: #cc0000 5%;
+                    background: -webkit-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -moz-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -ms-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -o-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -khtml-linear-gradient(center top, #cc0000 5%, black 100% ); }
+                html body > header nav ul li a.small {
+                  font-size: 0.8em; }
+                html body > header nav ul li a.disabled {
+                  cursor: default;
+                  background: #ededed 5%;
+                  background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  zoom: 1;
+                  filter: alpha(opacity=0.8);
+                  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.8)";
+                  -webkit-opacity: 0.8;
+                  -moz-opacity: 0.8;
+                  -ms-opacity: 0.8;
+                  -o-opacity: 0.8;
+                  -khtml-opacity: 0.8;
+                  opacity: 0.8; }
+                  html body > header nav ul li a.disabled:hover {
+                    background: #ededed 5%;
+                    background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% ); }
+                html body > header nav ul li a a {
+                  display: -moz-inline-stack ;
+                  display: inline-block ; }
+                html body > header nav ul li a:hover {
+                  background: #dfdfdf 5%;
+                  background: -webkit-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -ms-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -o-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -khtml-linear-gradient(center top, #dfdfdf 5%, #ededed 100% ); } }
+  html body > section {
+    width: 100%;
+    padding: 0;
+    vertical-align: top;
+    display: table ;
+    letter-spacing: 0;
+    word-spacing: -0.5em; }
+    html body > section * {
+      letter-spacing: normal;
+      word-spacing: normal; }
+    html.ie6 html body > section {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html.ie7 html body > section {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html.ie8 html body > section {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html body > section .main-content {
+      display: table-cell ;
+      width: 75%;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+      letter-spacing: normal;
+      word-spacing: normal; }
+      @media only screen and (max-width: 480px) {
+        html body > section .main-content {
+          width: 100%;
+          padding: 0;
+          vertical-align: top;
+          display: table ;
+          letter-spacing: 0;
+          word-spacing: -0.5em; }
+          html body > section .main-content * {
+            letter-spacing: normal;
+            word-spacing: normal; }
+          html.ie6 html body > section .main-content {
+            display: block ;
+            padding: 0;
+            float: left; }
+          html.ie7 html body > section .main-content {
+            display: block ;
+            padding: 0;
+            float: left; }
+          html.ie8 html body > section .main-content {
+            display: block ;
+            padding: 0;
+            float: left; } }
+      html.ie6 html body > section .main-content, html.ie7 html body > section .main-content, html.ie8 html body > section .main-content {
+        display: block ;
+        padding: 0;
+        width: 75%;
+        float: left; }
+      html body > section .main-content article {
+        display: -moz-inline-stack ;
+        display: inline-block ;
+        width: 100%;
+        margin: 0 0;
+        padding: 0;
+        vertical-align: top;
+        letter-spacing: normal;
+        word-spacing: normal;
+        margin-bottom: 1.786em;
+        background: rgba(255, 255, 255, 0.5);
+        border-bottom: 3px dashed #bfbfbf; }
+        html.ie6 html body > section .main-content article, html.ie7 html body > section .main-content article, html.ie8 html body > section .main-content article {
+          width: 100%;
+          padding: 0;
+          display: block ;
+          float: left; }
+        html body > section .main-content article:last-child {
+          margin-bottom: 0;
+          border-bottom: 0; }
+        html body > section .main-content article header {
+          width: 100%;
+          padding: 0;
+          vertical-align: top;
+          display: table ;
+          letter-spacing: 0;
+          word-spacing: -0.5em; }
+          html body > section .main-content article header * {
+            letter-spacing: normal;
+            word-spacing: normal; }
+          html.ie6 html body > section .main-content article header {
+            display: block ;
+            padding: 0;
+            float: left; }
+          html.ie7 html body > section .main-content article header {
+            display: block ;
+            padding: 0;
+            float: left; }
+          html.ie8 html body > section .main-content article header {
+            display: block ;
+            padding: 0;
+            float: left; }
+          html body > section .main-content article header div {
+            display: -moz-inline-stack ;
+            display: inline-block ;
+            width: 66.667%;
+            margin: 0 0;
+            padding: 0;
+            vertical-align: top;
+            letter-spacing: normal;
+            word-spacing: normal;
+            padding: 1em; }
+            @media only screen and (max-width: 480px) {
+              html body > section .main-content article header div {
+                display: -moz-inline-stack ;
+                display: inline-block ;
+                width: 100%;
+                margin: 0 0;
+                padding: 0;
+                vertical-align: top;
+                letter-spacing: normal;
+                word-spacing: normal; }
+                html.ie6 html body > section .main-content article header div, html.ie7 html body > section .main-content article header div, html.ie8 html body > section .main-content article header div {
+                  width: 100%;
+                  padding: 0;
+                  display: block ;
+                  float: left; } }
+            html.ie6 html body > section .main-content article header div, html.ie7 html body > section .main-content article header div, html.ie8 html body > section .main-content article header div {
+              width: 66%;
+              padding: 0;
+              display: block ;
+              float: left; }
+            html body > section .main-content article header div img {
+              margin: 0; }
+            html body > section .main-content article header div.social-links {
+              display: -moz-inline-stack ;
+              display: inline-block ;
+              width: 33.333%;
+              margin: 0 0;
+              padding: 0;
+              vertical-align: top;
+              letter-spacing: normal;
+              word-spacing: normal;
+              padding: 1em;
+              vertical-align: bottom; }
+              @media only screen and (max-width: 480px) {
+                html body > section .main-content article header div.social-links {
+                  display: -moz-inline-stack ;
+                  display: inline-block ;
+                  width: 100%;
+                  margin: 0 0;
+                  padding: 0;
+                  vertical-align: top;
+                  letter-spacing: normal;
+                  word-spacing: normal; }
+                  html.ie6 html body > section .main-content article header div.social-links, html.ie7 html body > section .main-content article header div.social-links, html.ie8 html body > section .main-content article header div.social-links {
+                    width: 100%;
+                    padding: 0;
+                    display: block ;
+                    float: left; } }
+              html.ie6 html body > section .main-content article header div.social-links, html.ie7 html body > section .main-content article header div.social-links, html.ie8 html body > section .main-content article header div.social-links {
+                width: 33%;
+                padding: 0;
+                display: block ;
+                float: left; }
+              @media only screen and (max-width: 480px) {
+                html body > section .main-content article header div.social-links h3 {
+                  padding: 0 1em; } }
+              html body > section .main-content article header div.social-links ul {
+                width: 100%;
+                padding: 0;
+                vertical-align: top;
+                display: table ;
+                letter-spacing: 0;
+                word-spacing: -0.5em;
+                list-style-type: none; }
+                html body > section .main-content article header div.social-links ul * {
+                  letter-spacing: normal;
+                  word-spacing: normal; }
+                html.ie6 html body > section .main-content article header div.social-links ul {
+                  display: block ;
+                  padding: 0;
+                  float: left; }
+                html.ie7 html body > section .main-content article header div.social-links ul {
+                  display: block ;
+                  padding: 0;
+                  float: left; }
+                html.ie8 html body > section .main-content article header div.social-links ul {
+                  display: block ;
+                  padding: 0;
+                  float: left; }
+                html body > section .main-content article header div.social-links ul li {
+                  display: -moz-inline-stack ;
+                  display: inline-block ;
+                  width: 18.75%;
+                  margin: 0 3.125%;
+                  padding: 0;
+                  vertical-align: top;
+                  letter-spacing: normal;
+                  word-spacing: normal;
+                  padding: 1em 0; }
+                  html.ie6 html body > section .main-content article header div.social-links ul li, html.ie7 html body > section .main-content article header div.social-links ul li, html.ie8 html body > section .main-content article header div.social-links ul li {
+                    width: 18%;
+                    padding: 0;
+                    display: block ;
+                    float: left; }
+                  html body > section .main-content article header div.social-links ul li a {
+                    border: 1px solid #dcdcdc;
+                    color: #777;
+                    padding: 6px 24px;
+                    text-decoration: none;
+                    text-align: center;
+                    -webkit-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                    -moz-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                    -ms-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                    -o-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                    -khtml-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                    box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                    -webkit-border-radius: 0.5em;
+                    -moz-border-radius: 0.5em;
+                    -ms-border-radius: 0.5em;
+                    -o-border-radius: 0.5em;
+                    -khtml-border-radius: 0.5em;
+                    border-radius: 0.5em;
+                    display: -moz-inline-stack ;
+                    display: inline-block ;
+                    -webkit-text-shadow: 1px 1px 0px white;
+                    -moz-text-shadow: 1px 1px 0px white;
+                    -ms-text-shadow: 1px 1px 0px white;
+                    -o-text-shadow: 1px 1px 0px white;
+                    -khtml-text-shadow: 1px 1px 0px white;
+                    text-shadow: 1px 1px 0px white;
+                    -webkit-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                    -moz-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                    -ms-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                    -o-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                    -khtml-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                    background: #ededed 5%;
+                    background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    display: -moz-inline-stack ;
+                    display: inline-block ;
+                    width: 100%;
+                    margin: 0 0;
+                    padding: 0;
+                    vertical-align: top;
+                    letter-spacing: normal;
+                    word-spacing: normal;
+                    height: 2em;
+                    line-height: 2em;
+                    text-align: center; }
+                    html body > section .main-content article header div.social-links ul li a.danger {
+                      border: 1px solid black;
+                      color: #fff;
+                      -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                      -moz-text-shadow: 1px 1px 0px #ffcccc;
+                      -ms-text-shadow: 1px 1px 0px #ffcccc;
+                      -o-text-shadow: 1px 1px 0px #ffcccc;
+                      -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                      text-shadow: 1px 1px 0px #ffcccc;
+                      background: #ffcccc 5%;
+                      background-image: url(../images/backgrounds/test.png);
+                      background-position: left top;
+                      background-repeat: repeat-x;
+                      background: -webkit-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                      background: -moz-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                      background: -ms-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                      background: -o-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                      background: -khtml-linear-gradient(center top, #ffcccc 5%, #cc0000 100% ); }
+                      html body > section .main-content article header div.social-links ul li a.danger:hover {
+                        border: 1px solid #ffcccc;
+                        color: #fff;
+                        -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                        -moz-text-shadow: 1px 1px 0px #ffcccc;
+                        -ms-text-shadow: 1px 1px 0px #ffcccc;
+                        -o-text-shadow: 1px 1px 0px #ffcccc;
+                        -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                        text-shadow: 1px 1px 0px #ffcccc;
+                        background: #cc0000 5%;
+                        background: -webkit-linear-gradient(center top, #cc0000 5%, black 100% );
+                        background: -moz-linear-gradient(center top, #cc0000 5%, black 100% );
+                        background: -ms-linear-gradient(center top, #cc0000 5%, black 100% );
+                        background: -o-linear-gradient(center top, #cc0000 5%, black 100% );
+                        background: -khtml-linear-gradient(center top, #cc0000 5%, black 100% ); }
+                    html body > section .main-content article header div.social-links ul li a.small {
+                      font-size: 0.8em; }
+                    html body > section .main-content article header div.social-links ul li a.disabled {
+                      cursor: default;
+                      background: #ededed 5%;
+                      background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                      background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                      background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                      background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                      background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                      zoom: 1;
+                      filter: alpha(opacity=0.8);
+                      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.8)";
+                      -webkit-opacity: 0.8;
+                      -moz-opacity: 0.8;
+                      -ms-opacity: 0.8;
+                      -o-opacity: 0.8;
+                      -khtml-opacity: 0.8;
+                      opacity: 0.8; }
+                      html body > section .main-content article header div.social-links ul li a.disabled:hover {
+                        background: #ededed 5%;
+                        background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                        background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                        background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                        background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                        background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% ); }
+                    html body > section .main-content article header div.social-links ul li a a {
+                      display: -moz-inline-stack ;
+                      display: inline-block ; }
+                    html body > section .main-content article header div.social-links ul li a:hover {
+                      background: #dfdfdf 5%;
+                      background: -webkit-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                      background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                      background: -ms-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                      background: -o-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                      background: -khtml-linear-gradient(center top, #dfdfdf 5%, #ededed 100% ); }
+                    html.ie6 html body > section .main-content article header div.social-links ul li a, html.ie7 html body > section .main-content article header div.social-links ul li a, html.ie8 html body > section .main-content article header div.social-links ul li a {
+                      width: 100%;
+                      padding: 0;
+                      display: block ;
+                      float: left; }
+            html body > section .main-content article header div img {
+              width: 100%; }
+          html body > section .main-content article header h1 {
+            display: -moz-inline-stack ;
+            display: inline-block ;
+            width: 100%;
+            margin: 0 0;
+            padding: 0;
+            vertical-align: top;
+            letter-spacing: normal;
+            word-spacing: normal;
+            padding: 0.857em;
+            text-align: center; }
+            @media only screen and (max-width: 480px) {
+              html body > section .main-content article header h1 {
+                text-align: left; } }
+            html.ie6 html body > section .main-content article header h1, html.ie7 html body > section .main-content article header h1, html.ie8 html body > section .main-content article header h1 {
+              width: 100%;
+              padding: 0;
+              display: block ;
+              float: left; }
+        html body > section .main-content article img {
+          float: left;
+          margin: 1em; }
+        html body > section .main-content article p {
+          padding: 1em; }
+          html body > section .main-content article p.col {
+            display: table-cell ;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            vertical-align: top;
+            letter-spacing: normal;
+            word-spacing: normal;
+            padding: 1em; }
+            @media only screen and (max-width: 480px) {
+              html body > section .main-content article p.col {
+                display: -moz-inline-stack ;
+                display: inline-block ;
+                width: 100%;
+                margin: 0 0;
+                padding: 0;
+                vertical-align: top;
+                letter-spacing: normal;
+                word-spacing: normal;
+                padding: 1em; }
+                html.ie6 html body > section .main-content article p.col, html.ie7 html body > section .main-content article p.col, html.ie8 html body > section .main-content article p.col {
+                  width: 100%;
+                  padding: 0;
+                  display: block ;
+                  float: left; } }
+            html.ie6 html body > section .main-content article p.col, html.ie7 html body > section .main-content article p.col, html.ie8 html body > section .main-content article p.col {
+              display: block ;
+              padding: 0;
+              width: 50%;
+              float: left; }
+        html body > section .main-content article h2 {
+          padding: 1em; }
+        html body > section .main-content article footer {
+          text-align: right; }
+    html body > section aside {
+      display: table-cell ;
+      width: 25%;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+      letter-spacing: normal;
+      word-spacing: normal;
+      background: #fcc; }
+      @media only screen and (max-width: 480px) {
+        html body > section aside {
+          width: 100%;
+          padding: 0;
+          vertical-align: top;
+          display: table ;
+          letter-spacing: 0;
+          word-spacing: -0.5em; }
+          html body > section aside * {
+            letter-spacing: normal;
+            word-spacing: normal; }
+          html.ie6 html body > section aside {
+            display: block ;
+            padding: 0;
+            float: left; }
+          html.ie7 html body > section aside {
+            display: block ;
+            padding: 0;
+            float: left; }
+          html.ie8 html body > section aside {
+            display: block ;
+            padding: 0;
+            float: left; } }
+      html.ie6 html body > section aside, html.ie7 html body > section aside, html.ie8 html body > section aside {
+        display: block ;
+        padding: 0;
+        width: 25%;
+        float: left; }
+      html body > section aside header {
+        display: -moz-inline-stack ;
+        display: inline-block ;
+        width: 100%;
+        margin: 0 0;
+        padding: 0;
+        vertical-align: top;
+        letter-spacing: normal;
+        word-spacing: normal;
+        padding: 1em; }
+        html.ie6 html body > section aside header, html.ie7 html body > section aside header, html.ie8 html body > section aside header {
+          width: 100%;
+          padding: 0;
+          display: block ;
+          float: left; }
+      html body > section aside nav {
+        display: -moz-inline-stack ;
+        display: inline-block ;
+        width: 100%;
+        margin: 0 0;
+        padding: 0;
+        vertical-align: top;
+        letter-spacing: normal;
+        word-spacing: normal;
+        padding-bottom: 1em; }
+        html.ie6 html body > section aside nav, html.ie7 html body > section aside nav, html.ie8 html body > section aside nav {
+          width: 100%;
+          padding: 0;
+          display: block ;
+          float: left; }
+        html body > section aside nav ul li {
+          display: block;
+          padding: 0.429em; }
+          html body > section aside nav ul li a {
+            display: block;
+            padding: 0.429em; }
+            @media only screen and (max-width: 480px) {
+              html body > section aside nav ul li a {
+                display: -moz-inline-stack ;
+                display: inline-block ;
+                width: 100%;
+                margin: 0 0;
+                padding: 0;
+                vertical-align: top;
+                letter-spacing: normal;
+                word-spacing: normal;
+                border: 1px solid #dcdcdc;
+                color: #777;
+                padding: 6px 24px;
+                text-decoration: none;
+                text-align: center;
+                -webkit-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -moz-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -ms-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -o-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -khtml-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -webkit-border-radius: 0.5em;
+                -moz-border-radius: 0.5em;
+                -ms-border-radius: 0.5em;
+                -o-border-radius: 0.5em;
+                -khtml-border-radius: 0.5em;
+                border-radius: 0.5em;
+                display: -moz-inline-stack ;
+                display: inline-block ;
+                -webkit-text-shadow: 1px 1px 0px white;
+                -moz-text-shadow: 1px 1px 0px white;
+                -ms-text-shadow: 1px 1px 0px white;
+                -o-text-shadow: 1px 1px 0px white;
+                -khtml-text-shadow: 1px 1px 0px white;
+                text-shadow: 1px 1px 0px white;
+                -webkit-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -moz-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -ms-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -o-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -khtml-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                background: #ededed 5%;
+                background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% ); }
+                html.ie6 html body > section aside nav ul li a, html.ie7 html body > section aside nav ul li a, html.ie8 html body > section aside nav ul li a {
+                  width: 100%;
+                  padding: 0;
+                  display: block ;
+                  float: left; }
+                html body > section aside nav ul li a.danger {
+                  border: 1px solid black;
+                  color: #fff;
+                  -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                  -moz-text-shadow: 1px 1px 0px #ffcccc;
+                  -ms-text-shadow: 1px 1px 0px #ffcccc;
+                  -o-text-shadow: 1px 1px 0px #ffcccc;
+                  -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                  text-shadow: 1px 1px 0px #ffcccc;
+                  background: #ffcccc 5%;
+                  background-image: url(../images/backgrounds/test.png);
+                  background-position: left top;
+                  background-repeat: repeat-x;
+                  background: -webkit-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -moz-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -ms-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -o-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -khtml-linear-gradient(center top, #ffcccc 5%, #cc0000 100% ); }
+                  html body > section aside nav ul li a.danger:hover {
+                    border: 1px solid #ffcccc;
+                    color: #fff;
+                    -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                    -moz-text-shadow: 1px 1px 0px #ffcccc;
+                    -ms-text-shadow: 1px 1px 0px #ffcccc;
+                    -o-text-shadow: 1px 1px 0px #ffcccc;
+                    -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                    text-shadow: 1px 1px 0px #ffcccc;
+                    background: #cc0000 5%;
+                    background: -webkit-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -moz-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -ms-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -o-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -khtml-linear-gradient(center top, #cc0000 5%, black 100% ); }
+                html body > section aside nav ul li a.small {
+                  font-size: 0.8em; }
+                html body > section aside nav ul li a.disabled {
+                  cursor: default;
+                  background: #ededed 5%;
+                  background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  zoom: 1;
+                  filter: alpha(opacity=0.8);
+                  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.8)";
+                  -webkit-opacity: 0.8;
+                  -moz-opacity: 0.8;
+                  -ms-opacity: 0.8;
+                  -o-opacity: 0.8;
+                  -khtml-opacity: 0.8;
+                  opacity: 0.8; }
+                  html body > section aside nav ul li a.disabled:hover {
+                    background: #ededed 5%;
+                    background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% ); }
+                html body > section aside nav ul li a a {
+                  display: -moz-inline-stack ;
+                  display: inline-block ; }
+                html body > section aside nav ul li a:hover {
+                  background: #dfdfdf 5%;
+                  background: -webkit-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -ms-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -o-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -khtml-linear-gradient(center top, #dfdfdf 5%, #ededed 100% ); } }
+      html body > section aside p {
+        display: -moz-inline-stack ;
+        display: inline-block ;
+        width: 100%;
+        margin: 0 0;
+        padding: 0;
+        vertical-align: top;
+        letter-spacing: normal;
+        word-spacing: normal;
+        padding: 0 1em; }
+        html.ie6 html body > section aside p, html.ie7 html body > section aside p, html.ie8 html body > section aside p {
+          width: 100%;
+          padding: 0;
+          display: block ;
+          float: left; }
+  html body > footer {
+    width: 100%;
+    padding: 0;
+    vertical-align: top;
+    display: table ;
+    letter-spacing: 0;
+    word-spacing: -0.5em; }
+    html body > footer * {
+      letter-spacing: normal;
+      word-spacing: normal; }
+    html.ie6 html body > footer {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html.ie7 html body > footer {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html.ie8 html body > footer {
+      display: block ;
+      padding: 0;
+      float: left; }
+    html body > footer nav {
+      display: -moz-inline-stack ;
+      display: inline-block ;
+      width: 75%;
+      margin: 0 0;
+      padding: 0;
+      vertical-align: top;
+      letter-spacing: normal;
+      word-spacing: normal; }
+      @media only screen and (max-width: 480px) {
+        html body > footer nav {
+          display: -moz-inline-stack ;
+          display: inline-block ;
+          width: 100%;
+          margin: 0 0;
+          padding: 0;
+          vertical-align: top;
+          letter-spacing: normal;
+          word-spacing: normal; }
+          html.ie6 html body > footer nav, html.ie7 html body > footer nav, html.ie8 html body > footer nav {
+            width: 100%;
+            padding: 0;
+            display: block ;
+            float: left; } }
+      html.ie6 html body > footer nav, html.ie7 html body > footer nav, html.ie8 html body > footer nav {
+        width: 75%;
+        padding: 0;
+        display: block ;
+        float: left; }
+      html body > footer nav ul {
+        width: 100%;
+        padding: 0;
+        vertical-align: top;
+        display: table ;
+        letter-spacing: 0;
+        word-spacing: -0.5em; }
+        html body > footer nav ul * {
+          letter-spacing: normal;
+          word-spacing: normal; }
+        html.ie6 html body > footer nav ul {
+          display: block ;
+          padding: 0;
+          float: left; }
+        html.ie7 html body > footer nav ul {
+          display: block ;
+          padding: 0;
+          float: left; }
+        html.ie8 html body > footer nav ul {
+          display: block ;
+          padding: 0;
+          float: left; }
+        html body > footer nav ul li {
+          display: -moz-inline-stack ;
+          display: inline-block ;
+          width: 16.667%;
+          margin: 0 0;
+          padding: 0;
+          vertical-align: top;
+          letter-spacing: normal;
+          word-spacing: normal;
+          padding: 0.714em;
+          text-align: center; }
+          @media only screen and (max-width: 480px) {
+            html body > footer nav ul li {
+              display: -moz-inline-stack ;
+              display: inline-block ;
+              width: 17.5%;
+              margin: 2.5% 1.25%;
+              padding: 0;
+              vertical-align: top;
+              letter-spacing: normal;
+              word-spacing: normal; }
+              html.ie6 html body > footer nav ul li, html.ie7 html body > footer nav ul li, html.ie8 html body > footer nav ul li {
+                width: 17%;
+                padding: 0;
+                display: block ;
+                float: left; } }
+          html.ie6 html body > footer nav ul li, html.ie7 html body > footer nav ul li, html.ie8 html body > footer nav ul li {
+            width: 16%;
+            padding: 0;
+            display: block ;
+            float: left; }
+          html body > footer nav ul li a {
+            display: block;
+            padding: 0.286em; }
+            @media only screen and (max-width: 480px) {
+              html body > footer nav ul li a {
+                display: -moz-inline-stack ;
+                display: inline-block ;
+                width: 100%;
+                margin: 0 0;
+                padding: 0;
+                vertical-align: top;
+                letter-spacing: normal;
+                word-spacing: normal;
+                border: 1px solid #dcdcdc;
+                color: #777;
+                padding: 6px 24px;
+                text-decoration: none;
+                text-align: center;
+                -webkit-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -moz-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -ms-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -o-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -khtml-box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                box-shadow: 0 14px 0 0 rgba(255, 255, 255, 0.1) inset;
+                -webkit-border-radius: 0.5em;
+                -moz-border-radius: 0.5em;
+                -ms-border-radius: 0.5em;
+                -o-border-radius: 0.5em;
+                -khtml-border-radius: 0.5em;
+                border-radius: 0.5em;
+                display: -moz-inline-stack ;
+                display: inline-block ;
+                -webkit-text-shadow: 1px 1px 0px white;
+                -moz-text-shadow: 1px 1px 0px white;
+                -ms-text-shadow: 1px 1px 0px white;
+                -o-text-shadow: 1px 1px 0px white;
+                -khtml-text-shadow: 1px 1px 0px white;
+                text-shadow: 1px 1px 0px white;
+                -webkit-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -moz-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -ms-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -o-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                -khtml-text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+                background: #ededed 5%;
+                background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                padding: 0.286em 0; }
+                html.ie6 html body > footer nav ul li a, html.ie7 html body > footer nav ul li a, html.ie8 html body > footer nav ul li a {
+                  width: 100%;
+                  padding: 0;
+                  display: block ;
+                  float: left; }
+                html body > footer nav ul li a.danger {
+                  border: 1px solid black;
+                  color: #fff;
+                  -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                  -moz-text-shadow: 1px 1px 0px #ffcccc;
+                  -ms-text-shadow: 1px 1px 0px #ffcccc;
+                  -o-text-shadow: 1px 1px 0px #ffcccc;
+                  -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                  text-shadow: 1px 1px 0px #ffcccc;
+                  background: #ffcccc 5%;
+                  background-image: url(../images/backgrounds/test.png);
+                  background-position: left top;
+                  background-repeat: repeat-x;
+                  background: -webkit-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -moz-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -ms-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -o-linear-gradient(center top, #ffcccc 5%, #cc0000 100% );
+                  background: -khtml-linear-gradient(center top, #ffcccc 5%, #cc0000 100% ); }
+                  html body > footer nav ul li a.danger:hover {
+                    border: 1px solid #ffcccc;
+                    color: #fff;
+                    -webkit-text-shadow: 1px 1px 0px #ffcccc;
+                    -moz-text-shadow: 1px 1px 0px #ffcccc;
+                    -ms-text-shadow: 1px 1px 0px #ffcccc;
+                    -o-text-shadow: 1px 1px 0px #ffcccc;
+                    -khtml-text-shadow: 1px 1px 0px #ffcccc;
+                    text-shadow: 1px 1px 0px #ffcccc;
+                    background: #cc0000 5%;
+                    background: -webkit-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -moz-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -ms-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -o-linear-gradient(center top, #cc0000 5%, black 100% );
+                    background: -khtml-linear-gradient(center top, #cc0000 5%, black 100% ); }
+                html body > footer nav ul li a.small {
+                  font-size: 0.8em; }
+                html body > footer nav ul li a.disabled {
+                  cursor: default;
+                  background: #ededed 5%;
+                  background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                  zoom: 1;
+                  filter: alpha(opacity=0.8);
+                  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.8)";
+                  -webkit-opacity: 0.8;
+                  -moz-opacity: 0.8;
+                  -ms-opacity: 0.8;
+                  -o-opacity: 0.8;
+                  -khtml-opacity: 0.8;
+                  opacity: 0.8; }
+                  html body > footer nav ul li a.disabled:hover {
+                    background: #ededed 5%;
+                    background: -webkit-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -moz-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -ms-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -o-linear-gradient(center top, #ededed 5%, #dfdfdf 100% );
+                    background: -khtml-linear-gradient(center top, #ededed 5%, #dfdfdf 100% ); }
+                html body > footer nav ul li a a {
+                  display: -moz-inline-stack ;
+                  display: inline-block ; }
+                html body > footer nav ul li a:hover {
+                  background: #dfdfdf 5%;
+                  background: -webkit-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -moz-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -ms-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -o-linear-gradient(center top, #dfdfdf 5%, #ededed 100% );
+                  background: -khtml-linear-gradient(center top, #dfdfdf 5%, #ededed 100% ); } }
+    html body > footer p {
+      display: -moz-inline-stack ;
+      display: inline-block ;
+      width: 100%;
+      margin: 0 0;
+      padding: 0;
+      vertical-align: top;
+      letter-spacing: normal;
+      word-spacing: normal;
+      padding: 1em;
+      text-align: right;
+      color: gray; }
+      html.ie6 html body > footer p, html.ie7 html body > footer p, html.ie8 html body > footer p {
+        width: 100%;
+        padding: 0;
+        display: block ;
+        float: left; }

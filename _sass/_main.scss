@@ -1,0 +1,324 @@
+// Include library the library
+@import  'lib/lib', '_config';
+
+// Include common style rules.
+@import 'common/reset', 'common/base', 'common/layout', 'common/typography', 'common/font-face', 'common/mobile';
+
+// Include Desired Web-Component Package(s)
+@import 'lib/packages/buttons', 'lib/packages/navigation', 'lib/packages/grid';
+
+// Example.html styles
+html {
+	
+	body {
+		@include respond-to(desktop-small) {
+			width:100%;
+		}
+		
+		@include main-container;
+	
+		background-color:#eee;
+	
+		& > header {
+			@include row();
+			
+			hgroup {
+				@include respond-to(handhelds-portrait) {
+					display:block;
+					width:100%;
+				}
+				
+				@include col($width: 6);
+				
+				h1 {
+					padding:rem(6) rem(10);
+					
+					border-bottom:$color-light-gray dashed 2px;
+				}
+				
+				h2 {
+					padding-top:rem(4);
+					padding-left:rem();
+					
+					font-style:italic;
+					color:$color-gray;
+				}
+				
+				h1, h2 {
+					@include respond-to(handhelds-portrait) {
+						display:block;
+						width:100%;
+						
+						text-align:center;
+						border-bottom:$color-light-gray dashed 2px;
+						
+						&:first-child {
+							border-bottom:0;
+						}
+					}
+				}
+			}
+			
+			nav {
+				@include respond-to(handhelds-portrait) {
+					display:block;
+					width:100%;
+				}
+				
+				@include col($width: 10);
+				
+				border-left:$color-light-gray dashed 2px;
+				
+				ul {
+					@include row();
+					
+					li {
+						@include respond-to(handhelds-portrait) {
+							@include cell($width: 2, $context: 10, $gutter: .25);
+							padding:rem() 0;
+							
+							text-align:center;
+						}
+						
+						@include cell($width: 2, $context: 10);
+						
+						a {
+							@include respond-to(handhelds-portrait) {
+								@include btn;
+								
+								padding:rem(12) rem(2);
+							}
+							
+							display:block;
+							width:100%;
+							padding:rem(12) rem(6);
+							
+							
+							text-align:center;
+						}
+					}
+				}
+			}
+		}
+	
+		& > section {
+			@include row();
+			
+			.main-content {
+				@include respond-to(handhelds-portrait) {
+					@include row();
+				}
+				
+				@include col(12);
+				
+				article {
+					@include cell(100%);
+					
+					margin-bottom:rem(25);
+					
+					background:rgba(255, 255, 255, .5);
+					border-bottom:3px dashed $color-light-gray;
+					
+					&:last-child {
+						margin-bottom:0;
+						
+						border-bottom:0;
+					}
+					
+					header {
+						@include row();
+						
+						div {
+							@include respond-to(handhelds-portrait) {
+								@include cell($width: 16, $context: 16);
+							}
+							
+							@include cell($width: 8, $context: 12);
+							padding:rem();
+							
+							img {
+								margin:0;
+							}
+							
+							&.social-links {
+								@include respond-to(handhelds-portrait) {
+									@include cell($width: 16, $context: 16);
+								}
+								
+								@include cell($width: 4, $context: 12);
+								padding:rem();
+								
+								vertical-align:bottom;
+								
+								h3 {
+									@include respond-to(handhelds-portrait) {
+										padding:0 rem();
+									}
+								}
+								
+								ul {
+									@include row();
+									
+									list-style-type:none;
+									
+									li {
+										@include cell($width: 1, $context: 4, $gutter: .25);
+										
+										padding:rem() 0;
+										
+										a {
+											@include btn;
+											@include cell($width: 1, $context: 1);
+											
+											height:rem(28);
+											
+											line-height:rem(28);
+											text-align:center;
+										}
+									}
+								}
+							}
+							
+							img {
+								width:100%;
+							}
+							
+						}
+						
+						h1 {
+							@include respond-to(handhelds-portrait) {
+								text-align:left;
+							}
+							
+							@include cell($width: 12, $context: 12);
+							
+							padding:rem(12);
+							
+							text-align:center;
+						}
+					}
+					img {
+						float:left;
+						margin:rem();
+					}
+					
+					p {
+						padding:rem();
+						
+						&.col {
+							@include respond-to(handhelds-portrait) {
+								@include cell(100%);
+								padding:rem();
+							}
+							
+							@include col(50%);
+							padding:rem();
+						}
+					}
+					h2 {
+						padding:rem();
+					}
+					
+					footer {
+						text-align:right;
+					}
+				}
+			}
+			
+			aside {
+				@include respond-to(handhelds-portrait) {
+					@include row();
+				}
+				
+				@include col(4);
+				
+				background:#fcc;
+				
+				header {
+					@include cell();
+					
+					padding:rem();
+				}
+				
+				nav {
+					@include cell();
+					
+					padding-bottom:rem();
+					
+					ul {
+						
+						li {
+							display:block;
+							padding:rem(6);
+							
+							a {
+								@include respond-to(handhelds-portrait) {
+									@include cell($width: 16, $context: 16);
+									@include btn();
+								}
+//								
+								
+								display:block;
+								padding:rem(6);
+							}
+						}
+					}
+				}
+				
+				p {
+					@include cell();
+					
+					padding:0 rem();
+				}
+			}
+		
+		}
+	
+		& > footer {
+			@include row();
+			
+			nav {
+				@include respond-to(handhelds-portrait) {
+					@include cell($width: 16, $context: 16);
+				}
+				
+				@include cell($width: 12);
+				
+				ul {
+					@include row();
+					
+					li {
+						@include respond-to(handhelds-portrait) {
+							@include cell($width: 2, $context: 10, $gutter: .25, $vertical-space: .5);
+						}
+						
+						@include cell($width: 2, $context: 12);
+						
+						padding:rem(10);
+						
+						text-align:center;
+						
+						a {
+							@include respond-to(handhelds-portrait) {
+								@include cell($width: 1, $context: 1);
+								@include btn();
+								padding:rem(4) 0;
+							}
+							display:block;
+							padding:rem(4);
+						}
+					}
+				}
+			}
+			
+			p {
+				@include cell($width: 16);
+				
+				padding:rem();
+				
+				text-align:right;
+				color:$color-gray;
+			}
+		}
+	}
+}

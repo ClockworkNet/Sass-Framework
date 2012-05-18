@@ -1,0 +1,42 @@
+$package-navigation:						true;
+$output-navigation-package-classes: 		false;
+
+@if $output-package-classes or $output-navigation-package-classes {
+	nav {
+	
+		&.stacked, .stacked {
+			li {
+				display:list-item;
+			
+				a {
+					display:list-item;
+				}
+			
+			}
+		}
+		 li {
+			&.dropdown {
+				position:relative;
+			
+				ul, ol {
+					display:none;
+					position:absolute;
+				
+					background-color:$background-color-base;
+				
+					li {
+						float:none;
+					}
+				}
+			
+				&:hover {
+					> ul {
+						display:block;
+					}
+				
+				}
+			}
+		}
+	}
+	
+} // End If

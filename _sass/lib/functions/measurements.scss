@@ -1,0 +1,13 @@
+// Functions for calculating measurements.
+
+@function em($target, $context: $font-size-base) {
+    @return ($target / $context) * 1em;
+}
+
+@function rem($target: $font-size-base) {
+    @return ($target / $font-size-base) * 1em;
+}
+
+@function calc-width-of-cells($num) {
+	@return $grid-cell-width * $num;
+}
